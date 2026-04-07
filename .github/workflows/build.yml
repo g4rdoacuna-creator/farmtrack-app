@@ -28,7 +28,7 @@ jobs:
           channel: 'stable'
 
       - name: Regenerate missing project files
-        run: flutter create .
+        run: flutter create --project-name farmtrack --org com.farmtrack --platforms=android .
 
       - name: Get Dependencies
         run: flutter pub get
