@@ -1,0 +1,58 @@
+name: farmtrack
+description: Offline-first livestock and farm operations manager for farmers.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Database — real SQLite, not localStorage
+  sqflite: ^2.3.3+1
+  path: ^1.9.0
+
+  # State management
+  provider: ^6.1.2
+
+  # UI & Fonts
+  google_fonts: ^6.2.1
+  flutter_svg: ^2.0.10+1
+
+  # Charts
+  fl_chart: ^0.68.0
+
+  # Local notifications (task reminders)
+  flutter_local_notifications: ^17.2.2
+  timezone: ^0.9.4
+
+  # Date formatting
+  intl: ^0.19.0
+
+  # File export (CSV)
+  path_provider: ^2.1.4
+  share_plus: ^10.0.2
+
+  # Secure PIN storage
+  flutter_secure_storage: ^9.2.2
+
+  # Haptic feedback
+  vibration: ^1.9.0
+
+  # Animations
+  flutter_animate: ^4.5.0
+
+  # UUID for IDs
+  uuid: ^4.4.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/

@@ -1,0 +1,40 @@
+name: Build Flutter APK
+
+# This workflow will run automatically when you upload your files, 
+# or you can click "Run workflow" manually under the Actions tab.
+on:
+  push:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.22.x'
+          channel: 'stable'
+
+      - name: Get Dependencies
+        run: flutter pub get
+
+      - name: Build APK for Android
+        run: flutter build apk --release --split-per-abi
+
+      - name: Upload APK to GitHub
+        uses: actions/upload-artifact@v4
+        with:
+          name: Farmtrack-Android-Apps
+          path: build/app/outputs/flutter-apk/*-release.apk
