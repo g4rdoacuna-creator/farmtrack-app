@@ -10,6 +10,7 @@ import '../core/theme.dart';
 import '../providers/farm_provider.dart';
 import '../widgets/shared_widgets.dart';
 import 'animals_screen.dart';
+import '../core/database.dart';
 
 // ═══════════════════════════════════════════════════════════════
 // FINANCE SCREEN
@@ -654,5 +655,3 @@ class _SheetHandle extends StatelessWidget {
   );
 }
 
-// Import from database for reset
-import '../core/database.dart';

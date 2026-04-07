@@ -7,7 +7,7 @@ import '../core/theme.dart';
 import '../providers/farm_provider.dart';
 import '../widgets/shared_widgets.dart';
 import 'animals_screen.dart';
-import 'tasks_screen.dart';
+import 'other_screens.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
